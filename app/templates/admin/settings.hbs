@@ -1,0 +1,16 @@
+<h2>Settings</h2>
+{{#if editing}}
+  <p>Personal Information</p>
+  <p>First Name: {{input value=model.firstObject.firstName}}</p>
+  <p>Last Name: {{input value=model.firstObject.lastName}}</p>
+  <button {{action "save"}}>Save</button>
+  <button {{action "cancel"}}>Cancel</button>
+{{else}}
+  <p>Personal Information</p>
+  <p>First Name: {{model.firstObject.firstName}}</p>
+  <p>Last Name: {{model.firstObject.lastName}}</p>
+
+  <button {{action "toggleEdit"}}>Edit</button>
+{{/if}}
+
+{{outlet}}
