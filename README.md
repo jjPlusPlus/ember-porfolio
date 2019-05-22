@@ -17,3 +17,4 @@ _A personal portfolio project based on Ember 3.x and Firebase Firestore._
 __ADDONS USED:__
 - ember-cli-shims
 - emberfire
+- emberx-file-input
