@@ -1,0 +1,8 @@
+{{#link-to "index"}}
+  <p>Go Back</p>
+{{/link-to}}
+
+{{#each model as |project|}}
+  <p>{{project.name}}</p>
+{{/each}}
+{{outlet}}
