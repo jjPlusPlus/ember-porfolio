@@ -10,5 +10,9 @@ export default Route.extend({
       // user is not logged in; redirect to the index;
       this.transitionTo("/admin/index");
     }
+  },
+
+  model(params) {
+    return this.get('store').query('project', params.project_id);
   }
 });
