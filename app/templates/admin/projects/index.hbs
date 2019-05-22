@@ -1,0 +1,14 @@
+<div class="projects-list">
+  {{#each model as |project index|}}
+    <div class="project-preview">
+      <img src={{project.image}} />
+      <p>{{project.name}} | {{project.id}}</p>
+      <p>{{project.description}}</p>
+      <div class="project-preview--actions">
+        {{#link-to "admin.project" project.id}}
+          <button>Edit</button>
+        {{/link-to}}
+      </div>
+    </div>
+  {{/each}}
+</div>

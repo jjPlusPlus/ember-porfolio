@@ -1,0 +1,19 @@
+<h2>Project Editor</h2>
+<div class="project-images">
+  <h4>Project Images</h4>
+  {{#each images.content.currentState as |image|}}
+    {{image-loader image=image}}
+  {{/each}}
+  <p>This is a component that uploads an image to Firebase</p>
+  {{x-file-input name="files" multiple=false action=(action "fileChanged") alt="Choose a File" accept="image/png,image/jpg,image/gif"}}
+  <button {{action "upload"}}>Upload</button>
+</div>
+<h3>Name: {{input value=model.firstObject.name}}</h3>
+<p>Link URL: {{input value=model.firstObject.url}}</p>
+<p>List description: {{input value=model.firstObject.description}}</p>
+<p>Content: {{input value=model.firstObject.content}}</p>
+
+<h4>Tags:</h4>
+
+
+{{outlet}}
